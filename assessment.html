@@ -37,7 +37,7 @@
                     font-size: 14px;
                   }
 
-              .modle{
+              .model{
                 display: none;
                 background-color: aliceblue;
                 position: fixed;
@@ -56,7 +56,7 @@
                 position: relative;
               }
 
-                .modle-box img{
+                .model-box img{
                     width: 100%;
                     height: 200px;    
                 }
@@ -72,8 +72,8 @@
             <body>
             <h2>products</h2>
             <div id="products-container"></div>
-            <div class="modle" id="modle">
-                <div class="modle-box">
+            <div class="model" id="modle">
+                <div class="model-box">
                 <span class="close" id="close">product</span>
                 <img id="mimg">
                 <h3 id="mtitle"></h3>
@@ -82,7 +82,7 @@
                 </div>
                 <script>
                     const container=document.getElementById("products-container")
-                    const modle=document.getElementById("modle")
+                    const model=document.getElementById("model")
                     const mimg=document.getElementById("mimg")
                     const mtitle=document.getElementById("mtitle")
                     const mdsce=document.getElementById("mdsce")
@@ -103,7 +103,7 @@
                         mimg.src=product.thumbnail;
                         mtitle.textContent=product.title;
                         mdsce.textContent=product.discription;
-                        modle.style.display="flex"
+                        model.style.display="flex"
 
                     }
                         card.appendChild(img);
@@ -114,10 +114,10 @@
                    });
                 });
 
-                close.onclick = () => modle.style.display = "none";
+                close.onclick = () => model.style.display = "none";
 
-                modle.onclick = e => {
-               if (e.target === modle) modle.style.display = "none";
+                model.onclick = e => {
+               if (e.target === modle) model.style.display = "none";
                 };
 
 
@@ -125,3 +125,4 @@
 
                 </body>
 </html>
+
